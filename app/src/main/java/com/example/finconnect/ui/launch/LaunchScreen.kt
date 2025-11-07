@@ -15,22 +15,20 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.foundation.Image
 import androidx.compose.ui.unit.dp
-import com.example.finconnect.ui.theme.FinConnectTheme
-
+import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.layout.ContentScale
+import com.example.finconnect.R
 @Composable
 fun InitLaunchScreen() {
     Box(modifier = Modifier.fillMaxSize()) {
-        // TODO: Add your background image here. For example:
-        // Image(
-        //     painter = painterResource(id = R.drawable.your_background_image),
-        //     contentDescription = null,
-        //     modifier = Modifier.fillMaxSize(),
-        //     contentScale = ContentScale.Crop
-        // )
+         Image(
+             painter = painterResource(id = R.drawable.launchbg),
+             contentDescription = null,
+             modifier = Modifier.fillMaxSize(),
+             contentScale = ContentScale.Crop
+         )
 
         Column(
             modifier = Modifier
