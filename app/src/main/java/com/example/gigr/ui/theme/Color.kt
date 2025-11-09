@@ -1,4 +1,4 @@
-package com.example.finconnect.ui.theme
+package com.example.gigr.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

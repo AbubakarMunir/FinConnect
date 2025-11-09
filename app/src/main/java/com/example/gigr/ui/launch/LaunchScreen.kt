@@ -1,4 +1,4 @@
-package com.example.finconnect.ui.launch
+package com.example.gigr.ui.launch
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
@@ -14,14 +14,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import androidx.navigation.compose.rememberNavController
-import com.example.finconnect.R
-import com.example.finconnect.ui.common.AppButton
-import com.example.finconnect.ui.navigation.AppRoutes
-import com.example.finconnect.ui.theme.FinConnectTheme
+import com.example.gigr.R
+import com.example.gigr.ui.common.AppButton
+import com.example.gigr.ui.navigation.AppRoutes
 
 @Composable
 fun InitLaunchScreen(navController: NavController) {

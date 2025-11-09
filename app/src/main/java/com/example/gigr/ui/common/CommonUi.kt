@@ -1,4 +1,4 @@
-package com.example.finconnect.ui.common
+package com.example.gigr.ui.common
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding

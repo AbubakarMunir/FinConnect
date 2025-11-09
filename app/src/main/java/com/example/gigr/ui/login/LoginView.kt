@@ -1,4 +1,4 @@
-package com.example.finconnect.ui.login
+package com.example.gigr.ui.login
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column

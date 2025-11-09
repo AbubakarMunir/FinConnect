@@ -1,4 +1,4 @@
-package com.example.finconnect
+package com.example.gigr
 
 import org.junit.Test
 

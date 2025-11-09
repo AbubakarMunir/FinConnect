@@ -1,11 +1,11 @@
-package com.example.finconnect.ui.navigation
+package com.example.gigr.ui.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.finconnect.ui.launch.InitLaunchScreen
-import com.example.finconnect.ui.login.InitLoginScreen
+import com.example.gigr.ui.launch.InitLaunchScreen
+import com.example.gigr.ui.login.InitLoginScreen
 
 object AppRoutes {
     const val LAUNCH = "launch"

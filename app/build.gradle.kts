@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.finconnect"
+    namespace = "com.example.gigr"
     compileSdk {
         version = release(36)
     }

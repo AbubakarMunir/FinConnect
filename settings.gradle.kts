@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "FinConnect"
+rootProject.name = "gigr"
 include(":app")
  

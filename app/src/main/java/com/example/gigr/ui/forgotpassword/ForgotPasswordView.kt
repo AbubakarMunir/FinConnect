@@ -1,10 +1,9 @@
-package com.example.finconnect.ui.signup
+package com.example.gigr.ui.forgotpassword
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.OutlinedTextField
@@ -17,17 +16,12 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.text.input.KeyboardType
-import androidx.compose.ui.text.input.PasswordVisualTransformation
-import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun InitSignUpScreen() {
-    var username by remember { mutableStateOf("") }
-    var password by remember { mutableStateOf("") }
-    var confirmPassword by remember { mutableStateOf("") }
+fun InitForgotPasswordScreen() {
+    var email by remember { mutableStateOf("") }
 
     Column(
         modifier = Modifier
@@ -36,52 +30,41 @@ fun InitSignUpScreen() {
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        SignUpTextField(
-            value = username, onValueChange = { username = it }, label = "Username"
-        )
-        SignUpTextField(
-            value = password, onValueChange = { password = it }, label = "Password", isPassword = true
-        )
-        SignUpTextField(
-            value = confirmPassword, onValueChange = { confirmPassword = it }, label = "Confirm Password", isPassword = true
-        )
-        SignUpButton(onClick = { /*TODO: Handle Sign Up*/ })
+        ForgotPasswordTextField(value = email, onValueChange = { email = it }, label = "Email")
+        ForgotPasswordButton(onClick = { /*TODO: Handle Forgot Password*/ })
     }
 }
 
 @Composable
-private fun SignUpTextField(
+private fun ForgotPasswordTextField(
     value: String,
     onValueChange: (String) -> Unit,
-    label: String,
-    isPassword: Boolean = false
+    label: String
 ) {
     OutlinedTextField(
         value = value,
         onValueChange = onValueChange,
         label = { Text(label) },
         singleLine = true,
-        visualTransformation = if (isPassword) PasswordVisualTransformation() else VisualTransformation.None,
-        keyboardOptions = if (isPassword) KeyboardOptions(keyboardType = KeyboardType.Password) else KeyboardOptions.Default,
         modifier = Modifier.padding(vertical = 8.dp)
     )
 }
 
 @Composable
-private fun SignUpButton(onClick: () -> Unit) {
+private fun ForgotPasswordButton(onClick: () -> Unit) {
     Button(
         onClick = onClick,
         colors = ButtonDefaults.buttonColors(
-            containerColor = Color.Blue,
+            containerColor = Color.Red,
             contentColor = Color.White
         )
     ) {
-        Text("Sign Up")
+        Text("Submit")
     }
 }
 
 @Preview(showBackground = true)
 @Composable
-fun InitSignUpScreenPreview() {
-    InitSignUpScreen()
+fun InitForgotPasswordScreenPreview() {
+    InitForgotPasswordScreen()
 }
