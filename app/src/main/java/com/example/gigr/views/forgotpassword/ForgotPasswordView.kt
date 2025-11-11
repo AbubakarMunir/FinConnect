@@ -1,4 +1,4 @@
-package com.example.gigr.ui.forgotpassword
+package com.example.gigr.views.forgotpassword
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column

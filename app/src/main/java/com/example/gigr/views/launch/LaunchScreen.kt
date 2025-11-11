@@ -1,4 +1,4 @@
-package com.example.gigr.ui.launch
+package com.example.gigr.views.launch
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
@@ -17,8 +17,8 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.example.gigr.R
-import com.example.gigr.ui.common.AppButton
-import com.example.gigr.ui.navigation.AppRoutes
+import com.example.gigr.views.common.AppButton
+import com.example.gigr.views.navigation.AppRoutes
 
 @Composable
 fun InitLaunchScreen(navController: NavController) {

@@ -1,4 +1,4 @@
-package com.example.gigr.ui.theme
+package com.example.gigr.views.theme
 
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme

@@ -1,4 +1,4 @@
-package com.example.gigr.ui.login
+package com.example.gigr.views.login
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column

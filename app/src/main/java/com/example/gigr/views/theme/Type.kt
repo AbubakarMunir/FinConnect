@@ -1,4 +1,4 @@
-package com.example.gigr.ui.theme
+package com.example.gigr.views.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
