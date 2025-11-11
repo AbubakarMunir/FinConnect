@@ -1,4 +1,4 @@
-package com.example.gigr.ui.common
+package com.example.gigr.ui
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
