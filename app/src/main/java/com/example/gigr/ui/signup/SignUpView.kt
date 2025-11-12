@@ -22,10 +22,12 @@ import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.viewmodel.compose.viewModel
+import com.example.gigr.viewmodels.SignUpViewModel
 
 @Composable
-fun InitSignUpScreen() {
-    var username by remember { mutableStateOf("") }
+fun InitSignUpScreen(signUpViewModel: SignUpViewModel = viewModel()) {
+    var email by remember { mutableStateOf("") }
     var password by remember { mutableStateOf("") }
     var confirmPassword by remember { mutableStateOf("") }
 
@@ -37,7 +39,7 @@ fun InitSignUpScreen() {
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         SignUpTextField(
-            value = username, onValueChange = { username = it }, label = "Username"
+            value = email, onValueChange = { email = it }, label = "Email"
         )
         SignUpTextField(
             value = password, onValueChange = { password = it }, label = "Password", isPassword = true
@@ -45,7 +47,10 @@ fun InitSignUpScreen() {
         SignUpTextField(
             value = confirmPassword, onValueChange = { confirmPassword = it }, label = "Confirm Password", isPassword = true
         )
-        SignUpButton(onClick = { /*TODO: Handle Sign Up*/ })
+        SignUpButton(onClick = { 
+            // TODO: Add validation to check if passwords match
+            signUpViewModel.signUpUser(email, password) 
+        })
     }
 }
 
