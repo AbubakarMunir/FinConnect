@@ -26,7 +26,7 @@ fun AppNavigation() {
         }
 
         composable(AppRoutes.SIGNUP) {
-            InitSignUpScreen()
+            InitSignUpScreen(navController = navController)
         }
     }
 }
