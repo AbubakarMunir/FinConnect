@@ -45,7 +45,7 @@ fun InitLaunchScreen(navController: NavController) {
             Spacer(modifier = Modifier.height(8.dp))
             AppButton(
                 text = "Sign Up",
-                onClick = { /*  */ },
+                onClick = { navController.navigate(AppRoutes.SIGNUP)},
                 containerColor = Color.Blue
             )
         }
