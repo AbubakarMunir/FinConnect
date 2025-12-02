@@ -14,6 +14,7 @@ import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 
@@ -21,17 +22,25 @@ import androidx.navigation.compose.rememberNavController
 @Composable
 fun AddRecordScreen(navController: NavController) {
     Scaffold(
-        topBar ={
-            TopAppBar(title={Text(" Add Record")},
-                navigationIcon = {IconButton(onClick = {navController.popBackStack()}) {
-                    Icon(Icons.Filled.ArrowBack, contentDescription = "Back")
-                }
+        topBar = {
+            TopAppBar(
+                title = { Text(" Add Record") },
+                navigationIcon = {
+                    IconButton(onClick = { navController.popBackStack() }) {
+                        Icon(Icons.Filled.ArrowBack, contentDescription = "Back")
+                    }
                 }
             )
         }
-    )
-    {
-            paddingvalues -> Column(modifier = Modifier.fillMaxSize().padding(paddingvalues)) { }
+    ) { paddingValues ->
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(paddingValues)
+                .padding(16.dp)
+        ) {
+            Text("Date")
+        }
     }
 
 }
