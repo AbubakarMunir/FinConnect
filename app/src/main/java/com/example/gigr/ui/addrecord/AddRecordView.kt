@@ -20,6 +20,8 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -27,12 +29,31 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
+import com.example.gigr.viewmodels.AddRecordViewModel
+import java.util.Date
+
+@Composable
+fun AddRecordScreen(
+    navController: NavController,
+    addRecordViewModel: AddRecordViewModel = viewModel()
+) {
+    val selectedDate by addRecordViewModel.selectedDate.collectAsState()
+
+    AddRecordScreenContent(
+        navController = navController,
+        selectedDate = selectedDate
+    )
+}
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun AddRecordScreen(navController: NavController) {
+fun AddRecordScreenContent(
+    navController: NavController,
+    selectedDate: Date
+) {
     Scaffold(
         topBar = {
             TopAppBar(
@@ -75,5 +96,8 @@ fun AddRecordScreen(navController: NavController) {
 @Preview(showBackground = true)
 @Composable
 fun AddRecordScreenPreview() {
-    AddRecordScreen(navController = rememberNavController())
+    AddRecordScreenContent(
+        navController = rememberNavController(),
+        selectedDate = Date()
+    )
 }
